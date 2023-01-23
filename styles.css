@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* Common Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+    font-family: 'Jura', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* End of Common Styles */
+
+/*  Mouse  */
+.mouse-circle,
+.mouse-dot {
+    border-radius: 50%;
+    position: fixed;
+    z-index:300;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.mouse-circle {
+    width: 7rem;
+    height: 7rem;
+    border: 0.2rem solid #c7a622;
+    animation: mouseCircleAnim 10s infinite linear;
+}
+
+@keyframes mouseCircleAnim{
+    0% {
+        width: 7rem;
+        height: 7rem;
+    }
+    25% {
+        width: 8rem;
+        height: 8rem;
+    }
+    35% {
+        width: 4rem;
+        height: 4rem;
+    }
+    70% {
+        width: 8rem;
+        height: 8rem;
+    }
+    100% {
+        width: 7rem;
+        height: 7rem;
+    }
+}
+
+.mouse-dot {
+    width:.7rem;
+    height: .7rem;
+    background-color: #9b0e0e;
+    animation: mouseDotAnim 11s infinite linear;
+}
+
+@keyframes mouseDotAnim {
+    0% {
+        width: .7rem;
+        height: .7rem;
+    }
+    55% {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    100% {
+        width: .7rem;
+        height:.7rem;
+    }
+}
+/* End of Mouse */
+
+/* Page Background */
+
+.page-background {
+    position: fixed;
+    width: 100%;
+    height:100vh;
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),url(images/bg.jpg)center no-repeat;
+    background-size: cover;
+}
+
+/* End of Page Background */
+
+/* Section 1 */
+.section-1 {
+    position: relative;
+    width: 100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo */
+
+.logo {
+    position: absolute;
+    top: 2rem;
+    left: 5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* End of Logo */
+/* Animated Circles */
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.circle {
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+    background-color: #9b0e0e;
+    align-self: center;
+    justify-self: center;
+    opacity: 0.5;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: left 2s, top 2s;
+}
+
+.circle-1 {
+    background: url(images/landing/circle-1-img.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.5rem dotted #a14b1a;
+}
+
+.circle-2 {
+    background: url(images/landing/circle-2-img.jpg);
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.5rem dashed #ffbd07;
+}
+
+.circle-3 {
+    background: url(images/landing/circle-3-img.jpg);
+    background-size: cover;
+    background-clip: content-box;
+    border: 1rem double #9b0e0e
+}
+
+.circle-4 {
+    background: url(images/landing/circle-4-img.jpg);
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.8rem dotted #a14b1a;
+}
+
+.main-circle {
+    width: 55rem;
+    height: 55rem;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: left 2s, top 2s;
+    top: 0;
+    left: 0;
+}
+
+.main-circle img {
+    mix-blend-mode: color-dodge;
+}
+
+/* End of Circles */
+
+/* Featured Text */
+.featured-text {
+    font-size: 2rem;
+    color: #ffff;
+    text-transform: uppercase;
+    width: 0;
+    word-wrap: break-word;
+    line-height: 3;
+    position: sticky;
+    top: 0;
+}
+
+.featured-text-1 {
+    margin: 0 auto 0 10rem;
+}
+
+.featured-text-2 {
+    margin: 0 10rem 0 auto;
+}
