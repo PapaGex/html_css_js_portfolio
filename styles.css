@@ -22,7 +22,88 @@ html {
     justify-content: center;
     align-items: center;
 }
+.main-btn {
+    position: absolute;
+    bottom: 3rem;
+    width: 13rem;
+    height: 13rem;
+    background-color: #9b0e0e;
+    border-radius: 50%;
+    border: .2rem dotted #ffff;
+    padding: 0.1rem;
+    overflow: hidden;
+}
 
+.main-btn-content {
+    width: 100%;
+    height: 100%;
+    border: .2rem dotted #e7be08;
+    border-radius: 50%;
+    transform: rotate(40deg);
+    transition: transform .2s.5s, border .2s;
+}
+
+.main-btn:hover .main-btn-content {
+    transform: rotate(60deg);
+    border: .2rem dotted #9b0e0e;
+    transition: transform .2s.5s, border .2s;
+}
+
+.main-btn-line {
+    position: absolute;
+    top: 4rem;
+    width: 3rem;
+    height: .5rem;
+    border: .1rem solid #ffff;
+}
+
+.main-btn-line:nth-child(1) {
+    transform: rotateZ(-45deg) translateX(-.65rem);
+    transform-origin: left center;
+    border-right: none;
+}
+
+.main-btn-line:nth-child(2) {
+    transform: rotateZ(45deg) translateX(.65rem);
+    transform-origin: right center;
+    border-left: none;
+}
+
+.main-btn-line:nth-child(3) {
+    transform: rotateZ(90deg) translateX(.5rem);
+    transform-origin: center;
+    border-left: none;
+}
+
+.main-btn span {
+    position: absolute;
+    bottom: 3rem;
+    color: #ffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.ripple {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #e7be08;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: rippleAnim 0.5s forwards;
+}
+
+@keyframes rippleAnim {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    100% {
+        width: 210%;
+        height: 210%;
+    }
+}
 /* End of Common Styles */
 
 /*  Mouse  */
@@ -227,86 +308,71 @@ html {
 }
 /* End of Featured Text */
 
-/* Main Button */
-.main-btn {
-    position: absolute;
-    bottom: 3rem;
-    width: 13rem;
-    height: 13rem;
-    background-color: #9b0e0e;
-    border-radius: 50%;
-    border: .2rem dotted #ffff;
-    padding: 0.1rem;
-    overflow: hidden;
+
+/* End of Section 1 */
+
+/* Section 2 */
+.section-2 {
+    position: relative;
+    padding: 10rem 10rem 15rem 10rem;
 }
 
-.main-btn-content {
-    width: 100%;
-    height: 100%;
-    border: .2rem dotted #e7be08;
-    border-radius: 50%;
-    transform: rotate(40deg);
-    transition: transform .2s.5s, border .2s;
-}
-
-.main-btn:hover .main-btn-content {
-    transform: rotate(60deg);
-    border: .2rem dotted #9b0e0e;
-    transition: transform .2s.5s, border .2s;
-}
-
-.main-btn-line {
-    position: absolute;
-    top: 4rem;
-    width: 3rem;
-    height: .5rem;
-    border: .1rem solid #ffff;
-}
-
-.main-btn-line:nth-child(1) {
-    transform: rotateZ(-45deg) translateX(-.65rem);
-    transform-origin: left center;
-    border-right: none;
-}
-
-.main-btn-line:nth-child(2) {
-    transform: rotateZ(45deg) translateX(.65rem);
-    transform-origin: right center;
-    border-left: none;
-}
-
-.main-btn-line:nth-child(3) {
-    transform: rotateZ(90deg) translateX(.5rem);
-    transform-origin: center;
-    border-left: none;
-}
-
-.main-btn span {
-    position: absolute;
-    bottom: 3rem;
-    color: #ffff;
-    font-size: 1.1rem;
-    font-weight: 600;
+.section-2-heading {
+    font-size: 2rem;
+    font-weight: 300;
+    color: white;
     text-transform: uppercase;
-}
-
-.ripple {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #e7be08;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: rippleAnim 0.5s forwards;
+    top: 50%;
+    left: 10rem;
+    transform: translateY(-50%);
+    width: 0;
+    word-break: break-all;
+    line-height: 4;
 }
 
-@keyframes rippleAnim {
+.about-me-text {
+    width: 80%;
+    margin: auto;
+}
+
+.about-me-text span {
+    font-family: "Poppins", sans-serif;
+    font-size: 15rem;
+    font-weight: bold;
+    color: #aaaa;
+    letter-spacing: .5rem;
+    line-height: .9;
+    text-shadow: 0 0 1rem #9b0e0e;
+    position: relative;
+    mix-blend-mode: color-dodge;
+}
+
+@keyframes aboutMeTextAnim {
     0% {
-        width: 0;
-        height: 0;
+        color: #aaaaaa;
+        top: 0;
+    }
+    10%,
+    90% {
+        color: #ffff;
+        top: 2rem;
     }
     100% {
-        width: 210%;
-        height: 210%;
+        color: #777777;
+        top: 0;
     }
 }
+.section-2 .main-btn {
+    left: 50%;
+    bottom: -5rem;
+    transform: translateX(-50%);
+
+}
+
+
+
+
+
+
+
