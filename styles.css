@@ -367,8 +367,19 @@ html {
     left: 50%;
     bottom: -5rem;
     transform: translateX(-50%);
+}
+/* section 3 */
+.section-3 {
+    width: 100%;
+    height: 100%;
+    padding: 20rem 0 10rem 0;
+    position: relative;
 
 }
+
+
+
+/* end section 3 */
 
 
 
